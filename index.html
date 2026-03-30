@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div id="login-container">
+    <div class="login-box">
+      <h2>Login to Start Quiz</h2>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <input type="password" id="password" placeholder="Enter password" required>
+      <button id="start-btn">Login</button>
+    </div>
+  </div>
+
+ 
+  <div id="language-container" style="display:none;">
+    <div class="language-box">
+      <h2>Select a Language you like</h2>
+      <button class="lang-btn" data-lang="java">Java</button>
+      <button class="lang-btn" data-lang="javascript">JavaScript</button>
+      <button class="lang-btn" data-lang="htmlcss">HTML & CSS</button>
+      <button class="lang-btn" data-lang="python">Python</button>
+    </div>
+  </div>
+
+  
+  <div id="quiz-container" style="display:none;">
+    <div class="quiz-container">
+      <div class="timer">Time Left: <span id="time">30</span>s</div>
+      <div class="question">Question will appear here</div>
+      <div class="options"></div>
+      <div class="result">Your score: <span id="score">0</span></div>
+      <button class="restart-btn">Restart Quiz</button>
+    </div>
+  </div>
+
+
+<div id="resultPopup" class="popup">
+  <div class="popup-content">
+    <span id="closePopup">&times;</span>
+    <div id="popupMessage"></div>
+    <div id="popupCelebration" style="display:none;">
+      <img src="images/fire.gif" alt="Celebration!" />
+    </div>
+    <div class="user-rating">
+      <span data-value="1">★</span>
+      <span data-value="2">★</span>
+      <span data-value="3">★</span>
+      <span data-value="4">★</span>
+      <span data-value="5">★</span>
+    </div>
+    <p id="userFeedback" style="margin-top:10px; color:blue;"></p>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
